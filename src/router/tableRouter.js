@@ -2,7 +2,7 @@
  * @Author: jing.chen
  * @Date: 2020-09-08 15:17:30
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-09-08 15:41:53
+ * @LastEditTime: 2020-09-08 16:49:11
  * @Description: 
  */
 
@@ -11,9 +11,9 @@ const router = express.Router()
 
 router.post('/form', (req, res) => {
   console.log(req.body)
-  let { userid, appid } = req.body
-  console.log(userid, appid)
-  if (userid && appid) {
+  let { userId, appId } = req.body
+  console.log(userId, appId)
+  if (userId && appId) {
     res.send({err: 0, result: {
         tableList: [{name: 'table'}]
       }
