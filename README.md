@@ -2,10 +2,10 @@
  * @Author: jing.chen
  * @Date: 2020-08-28 15:31:09
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-09-22 13:50:49
+ * @LastEditTime: 2020-09-22 13:52:52
  * @Description: 
 -->
-# iCrmNode
+# icrm-node
 
 ## Compiles and hot-reloads for development
 ```
