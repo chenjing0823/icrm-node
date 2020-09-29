@@ -2,11 +2,12 @@
  * @Author: jing.chen
  * @Date: 2020-09-08 14:13:43
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-09-18 16:14:27
+ * @LastEditTime: 2020-09-29 16:04:13
  * @Description: 
  */
 const express = require('express')
 const app = express()
+const db = require('./db/connect') // 链接数据库
 const port = 3000
 // expresss实例化
 
