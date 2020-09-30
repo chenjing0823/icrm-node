@@ -2,7 +2,7 @@
  * @Author: jing.chen
  * @Date: 2020-09-08 14:29:53
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-09-29 17:00:43
+ * @LastEditTime: 2020-09-30 15:14:38
  * @Description: 
  */
 
@@ -10,6 +10,7 @@ const express = require('express')
 const router = express.Router()
 const User = require('../db/model/userMoldel')
 const utils = require('../utils/index')
+
 /**
  * @api {post} /user/login 登录
  * @apiName 登录
@@ -28,6 +29,7 @@ router.post('/login', async (req, res) => {
     res.send({err: -4, msg: '用户名或密码不能为空'})
   }
 })
+
 /**
  * @api {post} /user/reg 用户注册
  * @apiName 用户注册
@@ -38,13 +40,13 @@ router.post('/login', async (req, res) => {
  * @apiParam {String} code 邮箱验证码
  */
 router.post('/reg', async (req, res) => {
-  let { us, ps, phone, sex } = req.body
+  let { us, ps, phone, sex, company } = req.body
 
   if (us && ps) {
     utils.isExist(us)
       .then(() => {
         const userId = (new Date()).getTime()
-        User.insertMany({us, ps, phone, userId, sex})
+        User.insertMany({us, ps, phone, userId, sex, company})
         res.send({ code: 1, success: true, result: {msg: '注册成功'}})
       })
       .catch(() => {

@@ -2,7 +2,7 @@
  * @Author: jing.chen
  * @Date: 2020-09-29 15:07:19
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-09-29 16:05:55
+ * @LastEditTime: 2020-09-30 15:08:38
  * @Description: 用户shecma对象
  */
 const mongoose = require('mongoose')
@@ -13,6 +13,7 @@ var userSchema = new Schema({
   ps: { type: String, required: true },
   userId: Number,
   phone: Number,
+  company: String,
   sex: { type: Number, default: 0 }
 })
 
