@@ -2,7 +2,7 @@
  * @Author: jing.chen
  * @Date: 2020-09-18 15:30:13
  * @LastEditors: jing.chen
- * @LastEditTime: 2020-09-30 14:41:22
+ * @LastEditTime: 2020-10-12 09:15:54
  * @Description: 
  */
 
@@ -19,8 +19,8 @@ const Menu = require('../db/model/MenuMoldel')
  *
  */
 router.post('/menuList', async (req, res) => {
-  let { userId } = req.body
-  Menu.find({}).then((data) => {
+  let { userId, type } = req.body
+  Menu.find({type}).then((data) => {
     res.send({ code: 1, result: { menuList: data }})
   })
 })
